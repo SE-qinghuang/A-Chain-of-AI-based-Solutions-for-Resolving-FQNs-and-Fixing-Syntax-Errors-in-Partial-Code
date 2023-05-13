@@ -1,5 +1,6 @@
 # A-Chain-of-AI-based-Solutions-for-Resolving-FQNs-and-Fixing-Syntax-Errors-in-Partial-Code
 
+### The directory structure of the project is as follows
 ```
 ─Experimental Results
 │  ├─RQ1
