@@ -28,7 +28,6 @@
 │  │
 │  └─RQ4
 │      ├─Content_representation
-│      │      acc.py
 │      │      Content_representation.py
 │      │      Result_For_RQ4_Content_representation.csv
 │      │
