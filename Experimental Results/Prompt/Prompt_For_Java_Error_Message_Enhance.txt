@@ -1,0 +1,75 @@
+Task description:
+// Plain English explanation of why does running the
+// above code cause an error and how to fix the problem
+
+// Code:
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+class Example3 {
+    public static void main(String[] args) throws Exception {
+        URL url = new URL("https://www.example.com/");
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        String line;
+        while ((line = reader.readLine()) != null)
+            System.out.println(line);
+        }
+        reader.close();
+    }
+}
+
+// Error Message£º
+myfile.java:15: error: <identifier> expected
+        reader.close();
+                    ^
+myfile.java:17: error: class, interface, enum, or record expected
+}
+^
+2 errors
+
+// Error Message Explanation:
+// The error occurs because the closing curly brace for the while loop is in the wrong position,
+// causing the code to end prematurely and leaving the closing curly brace for the main method without a matching opening brace.
+// To fix the problem, move the closing brace for the while loop to the end of the main method, immediately before the method's closing brace.
+
+// Code:
+public class Main {
+    public static void main(String[] args) {
+        String[] fruits = { "Apple", "Banana", "Orange" };
+        for (int i = 0; i < fruits.length, i++) {
+            String fruit = fruits[i];
+            String capFruit = StringUtils.capitalize(fruit);
+            System.out.println("Fruit " + i + ": " + capFruit);
+        }
+    }
+}
+
+// Error Message£º
+myfile.java:5: error: ';' expected
+        for (int i = 0; i < fruits.length, i++) {
+                                            ^
+myfile.java:6: error: cannot find symbol
+            String capFruit = StringUtils.capitalize(fruit);
+                              ^
+  symbol:   variable StringUtils
+  location: class Main
+1 error
+
+// Error Message Explanation:
+// The error occurs because there is a comma instead of a semicolon in the for loop's condition.
+// This causes a syntax error, and the loop's body is not executed. Additionally,
+// the error message indicates that the compiler cannot find a symbol called StringUtils,
+// which suggests that the code is missing an import statement or a class definition for this symbol.
+// To fix the problem, replace the comma with a semicolon in the for loop's condition,
+// and ensure that the code has the appropriate import statement or class definition for StringUtils.
+
+// Code:
+{{code}}
+
+// Error Message£º
+{{error message}}
+
+// Error Message Explanation:

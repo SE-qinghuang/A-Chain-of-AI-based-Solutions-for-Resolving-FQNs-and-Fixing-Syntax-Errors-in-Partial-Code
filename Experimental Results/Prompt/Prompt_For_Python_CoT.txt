@@ -1,0 +1,87 @@
+Task description:
+# 1. Extract the simple names in the code
+# 2. Convert the simplename to FQN
+# 3. Plain English explanation of why does running the above
+# code cause an error and how to fix the problem
+# 4. Fix errors in code based on error message explanation
+
+# Error Code:
+def test_delitem_keyerror(self):
+    e = EntryBase(req_()
+    del e['missing_key']
+
+# Fixed Code:
+def test_delitem_keyerror(self):
+    e = EntryBase(req_())
+    del(e['missing_key'])
+
+# Error Code:
+def retranslateUi(self, SettingsDialog_base):
+    SettingsDialog_base.setWindowTitle(QtGui.QApplication.translate("SettingsDialog_base", "HP Device Manager - Settings", None, QtGui.QApplication.UnicodeUTF8))
+    self.textLabel3_2_2.setText(QtGui.QApplication.translate("SettingsDialog_base", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+
+# Fixed Code:
+def retranslateUi(self, SettingsDialog_base):
+    SettingsDialog_base.setWindowTitle(QtGui.QApplication.translate("SettingsDialog_base", "HP Device Manager - Settings", None, QtGui.QApplication.UnicodeUTF8))
+    self.textLabel3_2_2.setText(QtGui.QApplication.translate("SettingsDialog_base", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"))
+
+# Error Code:
+def process(fn, mergefile = None, lazy = False):
+    if lazy and mergefile and os.stat(fn).st_mtime < os.stat(mergefile).st_mtime:
+    return
+    print(mergefile)
+    gen = Gen()
+    directives.execute(directives.load(fn), gen)
+    result = gen.generate()
+    if mergefile is None:
+        print(result)
+    else:
+    print('Merging %s into %s' %(fn, mergefile))
+        result = merge(mergefile, result)
+
+# Fixed Code:
+def process(fn, mergefile = None, lazy = False):
+    if lazy and mergefile and os.stat(fn).st_mtime < os.stat(mergefile).st_mtime:
+        return
+    print(mergefile)
+    gen = Gen()
+    directives.execute(directives.load(fn), gen)
+    result = gen.generate()
+    if mergefile is None:
+        print(result)
+    else:
+        print('Merging %s into %s' %(fn, mergefile))
+        result = merge(mergefile, result)
+
+# Code:
+def samePath(path1, path2):
+    '''Returns true if two given pathes path1 and path2 point to the same location'''
+    if os.path.abspath(path1) == os.path.abspath(path2):
+    return True
+    else:
+    return False
+
+# Fixed Code:
+def samePath(path1, path2):
+    '''Returns true if two given pathes path1 and path2 point to the same location'''
+    if os.path.abspath(path1) == os.path.abspath(path2):
+        return True
+    else:
+        return False
+
+# Code:
+def output_to_file(filename, mode = 'w'):
+    with contextlib.closing(open(filename, mode)) as port:
+    with CURRENT_OUTPUT_PORT.let(port):
+        yield
+
+# Fixed Code:
+def output_to_file(filename, mode = 'w'):
+    with contextlib.closing(open(filename, mode)) as port:
+        with CURRENT_OUTPUT_PORT.let(port):
+            yield
+
+# Code:
+{{code}}
+
+# Fixed Code:

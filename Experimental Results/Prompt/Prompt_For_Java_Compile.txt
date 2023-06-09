@@ -1,0 +1,6 @@
+{{code}}
+
+// Correct the errors in this code so that it can compile.
+// First, you should add fully qualified names to the classes (add import statements).
+// Then, you only need to output the code, don't add comments.
+// The output should be:

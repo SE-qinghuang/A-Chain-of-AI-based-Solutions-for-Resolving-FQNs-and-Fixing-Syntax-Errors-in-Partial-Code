@@ -1,0 +1,145 @@
+Task description:
+// 1. Extract the simple names in the code
+// 2. Convert the simplename to FQN
+// 3. Plain English explanation of why does running the above
+// code cause an error and how to fix the problem
+// 4. Fix errors in code based on error message explanation
+
+// Error Code:
+public class Main {
+    public static void main(String[] args) {
+        String[] fruits = { "Apple", "Banana", "Orange" };
+        for (int i = 0; i < fruits.length, i++) {
+            String fruit = fruits[i];
+            String capFruit = StringUtils.capitalize(fruit);
+            System.out.println("Fruit " + i + ": " + capFruit);
+        }
+    }
+}
+
+// Fixed Code:
+import org.apache.commons.lang3.StringUtils;
+public class Main {
+    public static void main(String[] args) {
+        String[] fruits = { "Apple", "Banana", "Orange" };
+        for (int i = 0; i < fruits.length; i++) {
+            String fruit = fruits[i];
+            String capFruit = StringUtils.capitalize(fruit);
+            System.out.println("Fruit " + i + ": " + capFruit);
+        }
+    }
+}
+
+// Error Code:
+public class Example1 {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>;
+        list.add("apple");
+        list.add("banana");
+        list.add("orange");
+        System.out.println(list);
+    }
+}
+
+// Fixed Code:
+import java.util.ArrayList;
+public class Example1 {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("apple");
+        list.add("banana");
+        list.add("orange");
+        System.out.println(list);
+    }
+}
+
+// Error Code:
+public class Example2 {
+    public static void main(String[] args) throws IOException {
+        String filename = "example.txt";
+        BufferedReader reader = new BufferedReader(new FileReader(filename));
+        String line;
+        while ((line = reader.readLine()) != null)
+            System.out.println(line);
+        }
+        reader.close();
+    }
+}
+
+// Fixed Code:
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class Example2 {
+    public static void main(String[] args) throws IOException {
+        String filename = "example.txt";
+        BufferedReader reader = new BufferedReader(new FileReader(filename));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
+        reader.close();
+    }
+}
+
+// Error Code:
+public class Example3 {
+    public static void main(String[] args) throws Exception {
+        URL url = new URL("https://www.example.com/");
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET")
+        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
+        reader.close();
+    }
+}
+// Fixed Code:
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+public class Example3 {
+    public static void main(String[] args) throws Exception {
+        URL url = new URL("https://www.example.com/");
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
+        reader.close();
+    }
+}
+
+// Error Code:
+public class Example4 {
+    public static void main(String[] args)
+        Frame frame = new Frame("Example");
+        Label label = new Label("Hello, World!");
+        frame.add(label);
+        frame.pack();
+        frame.setVisible(true);
+    }
+}
+
+// Fixed Code:
+import java.awt.Frame;
+import java.awt.Label;
+public class Example4 {
+    public static void main(String[] args) {
+        Frame frame = new Frame("Example");
+        Label label = new Label("Hello, World!");
+        frame.add(label);
+        frame.pack();
+        frame.setVisible(true);
+    }
+}
+
+// Error Code:
+{{code}}
+
+// Fixed Code:

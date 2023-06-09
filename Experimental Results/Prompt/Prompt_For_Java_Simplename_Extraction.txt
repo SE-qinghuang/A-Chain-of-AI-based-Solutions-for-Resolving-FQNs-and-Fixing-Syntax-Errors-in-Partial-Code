@@ -1,0 +1,74 @@
+// Extract the simple name from the code
+// Code:
+public class Main {
+    public static void main(String[] args) {
+        String[] fruits = { "Apple", "Banana", "Orange" };
+        for (int i = 0; i < fruits.length, i++) {
+            String fruit = fruits[i];
+            String capFruit = StringUtils.capitalize(fruit);
+            System.out.println("Fruit " + i + ": " + capFruit);}}}
+// Simple names:
+String
+StringUtils
+
+// Code:
+@RunWith(value=Suite.class)
+@SuiteClasses(value={TestCase.class})
+public class AllTests {
+}
+public class TestCase {
+    @Test
+    public void test1() {
+        assertTrue(tmp.getTermin().equals(soll));
+    }
+}
+// Simple names:
+Suite
+SuiteClasses
+RunWith
+
+// Code:
+public class hb19 {
+    public static void h1(){
+        String typename=null;
+        Type type = (Type) TypeFactory.heuristicType(typename);
+        boolean serializable = type!=null && type instanceof SerializableType;
+    }
+}
+// Simple names:
+String
+Type
+TypeFactory
+SerializableType
+
+// Code:
+public class ad18 {
+    public static void h1(){
+        String url =  String ;
+        Intent i = new Intent(Intent.ACTION_VIEW);
+    }
+}
+// Simple names:
+String
+Intent
+
+// Code:
+public class xt17 {
+    public static void h1(String xmlPath) throws ParserConfigurationException, IOException, SAXException {
+        File FileIn = new File(xmlPath);
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+    }
+}
+// Simple names:
+String
+ParserConfigurationException
+IOException
+SAXException
+File
+DocumentBuilderFactory
+DocumentBuilder
+
+// Code:
+{{code}}
+// Simple names:
