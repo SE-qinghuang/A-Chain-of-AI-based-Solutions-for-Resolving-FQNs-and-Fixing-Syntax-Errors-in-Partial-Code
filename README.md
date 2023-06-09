@@ -2,7 +2,20 @@
 
 ### The directory structure of the project is as follows
 ```
-─Experimental Results
+├─Experimental Results
+│  ├─Prompt
+│  │      Prompt_For_Java_Code_Fix.txt
+│  │      Prompt_For_Java_Compile.txt
+│  │      Prompt_For_Java_CoT.txt
+│  │      Prompt_For_Java_Direct.txt
+│  │      Prompt_For_Java_Error_Message_Enhance.txt
+│  │      Prompt_For_Java_Simplename_Extraction.txt
+│  │      Prompt_For_Java_Simplename_to_FQN.txt
+│  │      Prompt_For_Python_Code_Fix.txt
+│  │      Prompt_For_Python_CoT.txt
+│  │      Prompt_For_Python_Direct.txt
+│  │      Prompt_For_Python_Error_Message_Enhance.txt
+│  │
 │  ├─RQ1
 │  │      Result_For_RQ1.csv
 │  │
@@ -11,7 +24,7 @@
 │  │  │      PCR-Chain_For_Java.py
 │  │  │      Result_For_RQ2_PCR-Chain_Java.csv
 │  │  │
-│  │  └─Python
+│  │  └─Python not done
 │  │          PCR-Chain_For_Python.py
 │  │          Result_For_RQ2_PCR-Chain_Python.csv
 │  │
